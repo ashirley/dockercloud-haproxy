@@ -202,7 +202,7 @@ If the setting has a list as a value (e.g. `ADDITIONAL_SERVICES`), multipe envir
 |:-----:|:-----:|:----------|:--|
 |ADDITIONAL_BACKEND_\<NAME\>| |add an additional backend with the name set in \<NAME\>. Possible values include:`balance source, server 127.0.0.1:8080`|N|
 |ADDITIONAL_BACKEND_FILE_\<NAME\>| |add an additional backend with the name set in \<NAME\> and value of the contents of specified file.|N|
-|ADDITIONAL_SERVICES| |list of additional services to balance (es: `prj1:web,prj2:sql`). Discovery will be based on `com.docker.compose.{project,service}` container labels. This environment variable only works on compose v2, and the referenced services must be on a network resolvable and accessible to this containers.|Y|
+|ADDITIONAL_SERVICES| |list of additional services to balance (es: `prj1:web,prj2:sql`). Discovery will be based on <code>com.docker.compose.[project&#124;service]</code> container labels. This environment variable only works on compose v2, and the referenced services must be on a network resolvable and accessible to this containers.|Y|
 |BALANCE|roundrobin|load balancing algorithm to use. Possible values include: `roundrobin`, `static-rr`, `source`, `leastconn`. See:[HAProxy:balance](https://cbonte.github.io/haproxy-dconv/configuration-1.5.html#4-balance)|N|
 |CA_CERT_FILE| |the path of a ca-cert file. This allows you to mount your ca-cert file directly from a volume instead of from envvar. If set, `CA_CERT` envvar will be ignored. Possible value: `/cacerts/cert0.pem`|N|
 |CA_CERT| |CA cert for haproxy to verify the client. Use the same format as `DEFAULT_SSL_CERT`|N|
